@@ -1,6 +1,6 @@
 {
   "name": "skyot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Modulo que adapta varios modulos terceiros",
   "main": "dist/index.js",
   "scripts": {
@@ -9,15 +9,22 @@
     "dev": "npx ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "npx tsc"
   },
-  "keywords": [],
-  "author": "Wilson Felipe",
-  "license": "MIT",
+  "dependencies": {
+    "pino": "^7.7.0"
+  },
   "devDependencies": {
     "@types/node": "^17.0.18",
     "pino-pretty": "^7.5.1",
     "typescript": "^4.5.5"
   },
-  "dependencies": {
-    "pino": "^7.7.0"
-  }
+  "keywords": [
+    "logger",
+    "skyot"
+  ],
+  "author": "Wilson Felipe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wfelipe2011/skyot.git"
+  },
+  "license": "MIT"
 }

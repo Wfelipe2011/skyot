@@ -27,16 +27,14 @@ export function SkyotLogger(params?: { isObject: boolean }) {
 
   async function coreDecorator() {
     const { args, methodOriginal, propertyKey, context } = state;
-    skyotLogger(`Method => ${propertyKey}`);
-    checkLoggerObject();
+    skyotLogger(`Method => ${jsonLog(propertyKey)}`);
+    skyotLogger('Params => ' + jsonLog(args))
     const result = await methodOriginal.apply(context, args);
-    skyotLogger(`${propertyKey} return => ${result}`);
+    skyotLogger('Return => ' + jsonLog(result))
     return result;
   }
 
-  function checkLoggerObject() {
-    if (!params?.isObject) return skyotLogger(`Params => ${state.args}`);
-    skyotLogger(` --- Object ---`);
-    skyotLogger(state.args);
+  function jsonLog(obj) {
+    return JSON.stringify(obj, null, 2);
   }
 }

@@ -43,6 +43,27 @@ class A {
 [1644933258393] INFO (254625 on wilson-Vostro-3480): Return => "Hello World"
 ```
 
+### Logger
+
+- Uma versão mais perfomática que o console.log() tradicional
+
+```ts
+// message = "Hello World"
+import { logger } from "skyot";
+
+class A {
+  
+  public helloWord(message: string) {
+    logger(message)
+  }
+}
+```
+
+- Terminal
+
+```bash
+[1644933258393] INFO (254625 on wilson-Vostro-3480): "Hello World"
+```
 ## Contato
 
 - Author - Wilson Felipe <a style="margin:5px" href="https://www.linkedin.com/in/wilson-felipe-725538176/" target="blank"><img style="margin-right:5px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png" width="15" alt="github icone" />

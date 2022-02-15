@@ -10,8 +10,8 @@ const SkyotLoggerPino = pino({
   },
 });
 
-function skyotLogger(message: any | any[]) {
+function logger(message: any | any[]) {
   SkyotLoggerPino.info(message);
 }
 
-export { SkyotLoggerPino, skyotLogger };
+export { SkyotLoggerPino, logger };

@@ -1,0 +1,23 @@
+{
+  "name": "skyot",
+  "version": "1.0.0",
+  "description": "Modulo que adapta varios modulos terceiros",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "start": "npm run build && node dist/index.js",
+    "dev": "npx ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "Wilson Felipe",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "pino-pretty": "^7.5.1",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "pino": "^7.7.0"
+  }
+}

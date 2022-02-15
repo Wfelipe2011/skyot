@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "declaration": true,
+        "emitDeclarationOnly": false,
+        "strict": false,
+        "incremental": true,
+        "target": "ES2016",
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "noImplicitReturns": true,
+        "strictNullChecks": true, 
+        "noImplicitAny": false,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "resolveJsonModule": true,
+        "alwaysStrict": true,
+        "removeComments": true,
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": [
+                "./src/*"
+            ],
+            "@modules/*": [
+                "./src/app/modules/*"
+            ],
+            "@test/*": [
+                "./test/*"
+            ]
+        },
+        "rootDirs": [
+            "./src",
+            "./test"
+        ],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": [
+        "./src/**/*.ts",
+        "./test/**/*.ts"
+    ],
+    "exclude": [
+        "./node_modules",
+        "dist"
+    ]
+}

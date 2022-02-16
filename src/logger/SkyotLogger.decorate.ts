@@ -1,4 +1,4 @@
-import { skyotLogger } from "./SkyotLoggerPino";
+import { logger } from "./SkyotLoggerPino";
 
 type TState = {
   propertyKey: string;
@@ -27,10 +27,10 @@ export function SkyotLogger(params?: { isObject: boolean }) {
 
   async function coreDecorator() {
     const { args, methodOriginal, propertyKey, context } = state;
-    skyotLogger(`Method => ${jsonLog(propertyKey)}`);
-    skyotLogger('Params => ' + jsonLog(args))
+    logger(`Method => ${jsonLog(propertyKey)}`);
+    logger('Params => ' + jsonLog(args))
     const result = await methodOriginal.apply(context, args);
-    skyotLogger('Return => ' + jsonLog(result))
+    logger('Return => ' + jsonLog(result))
     return result;
   }
 

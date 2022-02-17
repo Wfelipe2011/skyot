@@ -2,7 +2,7 @@
     "compilerOptions": {
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist",
+        "outDir": "lib",
         "declaration": true,
         "emitDeclarationOnly": false,
         "strict": false,
@@ -44,6 +44,6 @@
     ],
     "exclude": [
         "./node_modules",
-        "dist"
+        "lib"
     ]
 }

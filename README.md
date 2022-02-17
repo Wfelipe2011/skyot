@@ -114,6 +114,60 @@ class A {
 ```bash
 [1645102751367] INFO (63524): "hello world"
 ```
+
+### JWT
+- Os JSON Web Tokens são um método RFC 7519 padrão do setor aberto  para representar declarações de forma segura entre duas partes.
+
+#### generateJwt
+```ts
+// message = "Hello World"
+import { SkyotJWT, logger } from "skyot";
+
+class A {
+  
+  public helloWord(message: string) {
+    const token = SkyotJWT.generateJwt({name:"Skyot"})
+    logger(token);
+  }
+}
+```
+
+- Terminal
+
+```bash
+[1645117856084] INFO (75716 on wilson-Vostro-3480): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2t5b3QiLCJpYXQiOjE2NDUxMTc4NTYsImV4cCI6MTY0NTIwNDI1Nn0.TOjcCs4dVIfBcwQtdjitXMslaS-dffkDOlHDOoTVNH8
+```
+
+#### decodeJwt
+```ts
+// message = "Hello World"
+import { SkyotJWT, logger } from "skyot";
+
+class A {
+  
+  public helloWord(message: string) {
+    const token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2t5b3QiLCJpYXQiOjE2NDUxMTc4NTYsImV4cCI6MTY0NTIwNDI1Nn0.TOjcCs4dVIfBcwQtdjitXMslaS-dffkDOlHDOoTVNH8'
+    const payload = SkyotJWT.decodeJwt(token)
+    logger(payload);
+  }
+}
+```
+
+- Terminal
+
+```bash
+[1645118123549] INFO (76417 on wilson-Vostro-3480):
+    header: {
+      "alg": "HS256",
+      "typ": "JWT"
+    }
+    payload: {
+      "name": "Skyot",
+      "iat": 1645117856,
+      "exp": 1645204256
+    }
+    signature: "TOjcCs4dVIfBcwQtdjitXMslaS-dffkDOlHDOoTVNH8"
+```
 ## Contato
 
 - Author - Wilson Felipe <a style="margin:5px" href="https://www.linkedin.com/in/wilson-felipe-725538176/" target="blank"><img style="margin-right:5px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png" width="15" alt="github icone" />

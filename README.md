@@ -38,9 +38,9 @@ class A {
 - Terminal
 
 ```bash
-[1644933258393] INFO (254625 on wilson-Vostro-3480): Method => "helloWord"
-[1644933258393] INFO (254625 on wilson-Vostro-3480): Params => [ "Hello World" ]
-[1644933258393] INFO (254625 on wilson-Vostro-3480): Return => "Hello World"
+[1644933258393] INFO (254625): Method => "helloWord"
+[1644933258393] INFO (254625): Params => [ "Hello World" ]
+[1644933258393] INFO (254625): Return => "Hello World"
 ```
 
 ### Logger
@@ -62,7 +62,57 @@ class A {
 - Terminal
 
 ```bash
-[1644933258393] INFO (254625 on wilson-Vostro-3480): "Hello World"
+[1644933258393] INFO (254625): "Hello World"
+```
+
+### Crypto
+
+- Uma abstração da biblioteca crypto
+
+#### encrypted
+
+```ts
+// message = "Hello World"
+import { SkyotCrypto, logger } from "skyot";
+
+class A {
+  
+  public helloWord(message: string) {
+    const secretKey = '123'
+    const messageEncrypted = SkyotCrypto.encrypted("hello world", secretKey)
+    logger(messageEncrypted)
+  }
+}
+```
+
+- Terminal
+
+```bash
+[1645102590429] INFO (62682): U2FsdGVkX19p0dG0o5IA9GHwQxgEcwZCDMZdJm871NM=
+```
+
+#### descrypted
+
+```ts
+// message = "Hello World"
+import { SkyotCrypto, logger } from "skyot";
+
+class A {
+  
+  public helloWord(message: string) {
+    const secretKey = "123";
+    const messageEncripeted = 'U2FsdGVkX1/Okp/eZ/U7A4eTdf5/EIsp4iIxvy6+z00='
+    
+    const messagedDescrypted = SkyotCrypto.descrypted(messageEncripeted, secretKey);
+    logger(messagedDescrypted);
+  }
+}
+```
+
+- Terminal
+
+```bash
+[1645102751367] INFO (63524): "hello world"
 ```
 ## Contato
 

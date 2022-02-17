@@ -1,6 +1,6 @@
 {
   "name": "skyot",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Modulo que adapta varios modulos terceiros",
   "main": "lib/index.js",
   "scripts": {

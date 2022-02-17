@@ -1,3 +1,4 @@
 import { SkyotLogger } from "./logger/SkyotLogger.decorate";
 import { logger, SkyotLoggerPino } from "./logger/SkyotLoggerPino";
-export { SkyotLoggerPino, logger, SkyotLogger };
+import { SkyotCrypto } from "./crypto/SkyotCrypto";
+export { SkyotLoggerPino, logger, SkyotLogger, SkyotCrypto };

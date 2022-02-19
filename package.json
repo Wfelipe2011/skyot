@@ -1,7 +1,7 @@
 {
   "name": "skyot",
-  "version": "1.3.2",
-  "description": "Modulo que adapta varios modulos terceiros",
+  "version": "1.3.3",
+  "description": "Módulo que adapta varios módulos terceiros",
   "main": "lib/index.js",
   "scripts": {
     "prebuild": "rimraf lib",

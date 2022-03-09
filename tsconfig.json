@@ -1,49 +1,31 @@
 {
-    "compilerOptions": {
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "lib",
-        "declaration": true,
-        "emitDeclarationOnly": false,
-        "strict": false,
-        "incremental": true,
-        "target": "ES2016",
-        "module": "CommonJS",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "noImplicitReturns": true,
-        "strictNullChecks": true, 
-        "noImplicitAny": false,
-        "strictFunctionTypes": true,
-        "noImplicitThis": true,
-        "resolveJsonModule": true,
-        "alwaysStrict": true,
-        "removeComments": true,
-        "baseUrl": ".",
-        "paths": {
-            "@src/*": [
-                "./src/*"
-            ],
-            "@modules/*": [
-                "./src/app/modules/*"
-            ],
-            "@test/*": [
-                "./test/*"
-            ]
-        },
-        "rootDirs": [
-            "./src",
-            "./test"
-        ],
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
-    },
-    "include": [
-        "./src/**/*.ts",
-        "./test/**/*.ts"
-    ],
-    "exclude": [
-        "./node_modules",
-        "lib"
-    ]
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "lib",
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "strict": false,
+    "incremental": true,
+    "target": "ES2017",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictFunctionTypes": true,
+    "noImplicitThis": false,
+    "resolveJsonModule": true,
+    "alwaysStrict": true,
+    "removeComments": true,
+    "baseUrl": ".",
+    "rootDirs": ["./src", "./test"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["./src/**/*.ts", "./test/**/*.ts", "src/utils/SkyotException.ts"],
+  "exclude": ["./node_modules", "lib"]
 }

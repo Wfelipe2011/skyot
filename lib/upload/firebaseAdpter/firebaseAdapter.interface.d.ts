@@ -11,7 +11,3 @@ export interface IFirebaseConfig {
     bucket: any;
     storage: any;
 }
-export declare function SkyotException(this: any, { statusCode, message }: {
-    message: string;
-    statusCode?: number;
-}): void;
